@@ -71,3 +71,17 @@ body {
   background-color: #fff;
   background-color: orangered;
   flex: 1; }
+
+.logo {
+  height: 3.25rem; }
+
+.search_icon {
+  height: 2rem;
+  width: 2rem; }
+
+.user-nav_icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav_user-photo {
+  height: 3.75rem; }
