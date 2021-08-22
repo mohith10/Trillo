@@ -101,11 +101,20 @@
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem;
-
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
   &_item {
     position: relative;
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
+    }
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -136,6 +145,9 @@
     align-items: center;
     position: relative;
     z-index: 10;
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
   }
   &_icon {
     width: 1.75rem;
@@ -153,6 +165,9 @@
   color: var(--color-grey-light-3);
   text-align: center;
   padding: 2.5rem;
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 ////////////////////////////////////////
 
@@ -296,12 +311,16 @@
     width: 4rem;
     border-radius: 50%;
     border: 3px solid #fff;
+
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
   &_count {
     margin-right: auto;
+  }
+  &_friends {
+    display: flex;
   }
 }
 
@@ -312,6 +331,10 @@
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
   &_text {
     margin-bottom: 2rem;
   }
@@ -356,6 +379,9 @@
     text-transform: uppercase;
     margin-bottom: 2.5rem;
   }
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 }
 
 .btn {
@@ -390,12 +416,12 @@
     width: 100%;
     cursor: pointer;
   }
-  &:hover{
+  &:hover {
     background-image: linear-gradient(
-    to right,
-    var(--color-primary-dark),
-    var(--color-primary-light)
-  );
+      to right,
+      var(--color-primary-dark),
+      var(--color-primary-light)
+    );
   }
   &:hover &_visible {
     transform: translateY(100%);
@@ -403,7 +429,7 @@
   &:hover &_invisible {
     top: 0;
   }
-  &:focus{
+  &:focus {
     animation: pulsate 1s infinite;
   }
 }
